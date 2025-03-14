@@ -2,9 +2,9 @@ name: IsoLamp
 channels:
   - conda-forge
   - bioconda
-  - anaconda
-  - r
-  - defaults
+  #- anaconda
+  #- r
+  #- defaults
 dependencies:
   - bbmap
   - bedtools
@@ -20,6 +20,9 @@ dependencies:
   - r-optparse
   - r-dplyr
   - bioconductor-bambu
+    # add compatible r-xgboost version for bambu otherwise bambu borks with incompatible xgboost
+    # https://github.com/GoekeLab/bambu/issues/447
+  - r-xgboost=1.7
   - r-factominer
   - r-factoextra
   - r-ggrepel
