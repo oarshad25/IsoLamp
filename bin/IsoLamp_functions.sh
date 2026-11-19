@@ -100,7 +100,7 @@ function concat_files() {
 		cat $READS/$dir_name/*.fa* > $OUTPUT_NAME/temp_files/reads/$dir_name.firstpass.fa
 		
 		# remove duplicated reads
-		redirect_output dedupe.sh in=$OUTPUT_NAME/temp_files/reads/$dir_name.firstpass.fa out=$OUTPUT_NAME/temp_files/reads/$dir_name.fa rmn=t
+		redirect_output dedupe.sh in=$OUTPUT_NAME/temp_files/reads/$dir_name.firstpass.fa out=$OUTPUT_NAME/temp_files/reads/$dir_name.fa rmn=t ac=f
 		rm $OUTPUT_NAME/temp_files/reads/$dir_name.firstpass.fa
 
 	done
